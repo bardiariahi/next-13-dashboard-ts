@@ -1,0 +1,31 @@
+{
+  "name": "next-app-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "accept-language": "^3.0.18",
+    "i18next": "^23.5.1",
+    "i18next-resources-to-backend": "^1.1.4",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-i18next": "^13.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}
