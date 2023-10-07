@@ -1,24 +1,39 @@
-import './global.css'
-
-import { dir } from 'i18next'
-import { languages } from '../i18n/settings'
+import "./global.css";
+import dynamic from "next/dynamic";
+import { dir } from "i18next";
+import { languages } from "../i18n/settings";
+import { Footer } from "./components/Footer";
+const Sidebar = dynamic(() => import("../[lng]/components/Sidebar.component"), {
+  ssr: false,
+});
+import Navbar from "../[lng]/components/navbar.component";
 
 export async function generateStaticParams() {
-  return languages.map((lng) => ({ lng }))
+  return languages.map((lng) => ({ lng }));
 }
 
 export default function RootLayout({
   children,
-  params: {
-    lng
-  }
-}) {
+  params: { lng },
+  showMobileSidebar = true,
+}: any) {
   return (
     <html lang={lng} dir={dir(lng)}>
       <head />
-      <body>
-        {children}
+      <body
+        className={`min-h-screen  max-w-screen-end overflow-y-auto `}
+      >
+        <div className={``}>
+          <Navbar showMobileSidebar={showMobileSidebar} />
+          {/* Main content */}
+          <div className="">
+            <Sidebar />
+
+            {children}
+          </div>
+        </div>
+        <Footer lng={lng} />
       </body>
     </html>
-  )
+  );
 }
