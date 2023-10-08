@@ -20,19 +20,15 @@ export default function RootLayout({
   return (
     <html lang={lng} dir={dir(lng)}>
       <head />
-      <body
-        className={`min-h-screen  max-w-screen-end overflow-y-auto `}
-      >
-        <div className={``}>
-          <Navbar showMobileSidebar={showMobileSidebar} />
-          {/* Main content */}
-          <div className="">
-            <Sidebar />
+      <body className={`min-h-screen max-w-screen-end overflow-y-auto `}>
+        <div className={` flex  `}>
+          <Sidebar />
+          <div className="w-full">
+            <Navbar showMobileSidebar={showMobileSidebar} />
 
             {children}
           </div>
         </div>
-        <Footer lng={lng} />
       </body>
     </html>
   );
