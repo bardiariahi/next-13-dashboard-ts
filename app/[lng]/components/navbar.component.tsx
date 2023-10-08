@@ -1,6 +1,6 @@
 "use client"
 
-// import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import Image from 'next/image';
 import MobileSidebar from './mobile-sidebar.component'
@@ -8,17 +8,17 @@ import { AiOutlineLogout, AiOutlineUser } from "react-icons/ai";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { Popover } from '@headlessui/react'
-// import UserLogo from "../../public/assets/images/UserIcon.svg"
+import UserLogo from "../../../public/UserIcon.svg"
 import Link from 'next/link';
 
 const modalId = 'navbar-logout-modal'
 
 const Navbar = ({ showMobileSidebar }:any) => {
-    // const router = useRouter()
+    const router = useRouter()
 
     const handleLogOut = () => {
         localStorage.clear()
-        // router.push("/login")
+        router.push("/login")
     }
 
     const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false)
@@ -62,12 +62,12 @@ const Navbar = ({ showMobileSidebar }:any) => {
                     <Popover className="relative h-full flex items-center gap-2 text-left">
                         <Popover.Button className="btn btn-ghost btn-circle border-none outline-none focus-visible:outline-none focus-visible:border-none ">
                             {/* <SlSettings /> */}
-                            {/* <Image src={UserLogo} height={100} width={100} alt='لوگو کاربر' /> */}
+                            <Image src={UserLogo} height={50} width={50} alt='لوگو کاربر' />
                         </Popover.Button>
 
                         <Popover.Panel className="absolute bg-white drop-shadow-2xl shadow-2xl -right-44 top-16 p-5  rounded-xl w-52 z-20">
                             <div className="flex flex-row md:flex-col">
-                                <Link href="/dashboard/Profile/" className=" btn-ghost  rounded-lg py-2 px-4">
+                                <Link href="/dashboard/Profile/" className=" btn-ghost hover:bg-gray-300  rounded-lg py-2 px-4">
                                     <div className="flex gap-2  items-center duration-300 justify-start">
                                         <AiOutlineUser className="text-xl duration-300" />
                                         <span
@@ -78,7 +78,7 @@ const Navbar = ({ showMobileSidebar }:any) => {
                                 </Link>
                                 <button
                                     onClick={handleLogOut}
-                                    className=" btn-ghost py-2 px-4 rounded-lg tooltip tooltip-right"
+                                    className=" btn-ghost py-2 px-4 rounded-lg hover:bg-red-400   tooltip tooltip-right"
                                 >
                                     <div className="flex gap-2  text-error items-center duration-300 justify-start">
                                         <AiOutlineLogout className="text-xl duration-300" />

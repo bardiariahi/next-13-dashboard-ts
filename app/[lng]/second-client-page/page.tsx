@@ -21,7 +21,6 @@ export default function Page({ params: { lng } }: {
           </button>
         </Link>
       </main>
-      <Footer lng={lng} path="/second-client-page" />
     </>
   )
 }

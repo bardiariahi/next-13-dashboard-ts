@@ -1,7 +1,7 @@
 import { languages, fallbackLng } from '../i18n/settings'
 import { useTranslation } from '../i18n'
 
-export default async function Head({ params: { lng } }) {
+export default async function Head({ params: { lng } }:any) {
   if (languages.indexOf(lng) < 0) lng = fallbackLng
   const { t } = await useTranslation(lng)
 

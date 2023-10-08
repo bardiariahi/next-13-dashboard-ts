@@ -22,7 +22,7 @@ export default function RootLayout({
       <head />
       <body className={`min-h-screen max-w-screen-end overflow-y-auto `}>
         <div className={` flex  `}>
-          <Sidebar />
+          <Sidebar  lng={lng}/>
           <div className="w-full">
             <Navbar showMobileSidebar={showMobileSidebar} />
 

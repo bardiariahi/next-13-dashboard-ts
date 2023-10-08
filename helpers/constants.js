@@ -32,20 +32,20 @@ export const ACCEPT_ONLY_NUMBERS = /^[0-9]*$/;
 
 export const SIDEBAR_ITEMS = [
   {
-    name: "مخاطبین",
-    url: "/dashboard/phonebook",
+    name: "داشبورد",
+    url: "/dashboard",
     id: 3,
     icon: <HiOutlineUsers className="text-base duration-100" />,
   },
   {
-    name: "پیامک",
-    url: "/dashboard/message",
+    name: "صفحه کلاینت",
+    url: "/second-client-page",
     id: 4,
     icon: <FiMessageCircle className="text-base duration-100" />,
   },
   {
-    name: "پیام های ارسال شده",
-    url: "/dashboard/reports/smsList",
+    name: " صفحه دوم",
+    url: "/second-page",
     id: 5,
     icon: <BsCardList className="text-base duration-100" />,
   },
@@ -63,42 +63,42 @@ export const SIDEBAR_ITEMS = [
   //     }
   //   ],
   // },
-  {
-    name: "کلمات ممنوعه",
-    url: "/dashboard/avoid-words",
-    id: 6,
-    icon: <BsExclamationCircle className="text-base duration-100" />,
-  },
-  {
-    name: "شرکت های استعلام",
-    url: "/dashboard/inquiry-company",
-    id: 7,
-    icon: <IoBusinessOutline className="text-base duration-100" />,
-  },
-  {
-    name: "استعلام",
-    url: "/dashboard/inquiry",
-    id: 10,
-    icon: <CiSearch className="text-base duration-100" />,
-  },
-  {
-    name: "گزارشات مردمی",
-    url: "/dashboard/popular-reports",
-    id: 8,
-    icon: <HiOutlineDocumentText className="text-base duration-100" />,
-  },
-  {
-    name: "هرزنامه",
-    url: "/dashboard/spam",
-    id: 9,
-    icon: <BsClipboard2X    className="text-base duration-100" />,
-  },
-  {
-    name: " گزارشات مدیریتی",
-    url: "/dashboard/total-reports",
-    id: 9,
-    icon: <TbReportSearch    className="text-base duration-100" />,
-  },
+  // {
+  //   name: "کلمات ممنوعه",
+  //   url: "/dashboard/avoid-words",
+  //   id: 6,
+  //   icon: <BsExclamationCircle className="text-base duration-100" />,
+  // },
+  // {
+  //   name: "شرکت های استعلام",
+  //   url: "/dashboard/inquiry-company",
+  //   id: 7,
+  //   icon: <IoBusinessOutline className="text-base duration-100" />,
+  // },
+  // {
+  //   name: "استعلام",
+  //   url: "/dashboard/inquiry",
+  //   id: 10,
+  //   icon: <CiSearch className="text-base duration-100" />,
+  // },
+  // {
+  //   name: "گزارشات مردمی",
+  //   url: "/dashboard/popular-reports",
+  //   id: 8,
+  //   icon: <HiOutlineDocumentText className="text-base duration-100" />,
+  // },
+  // {
+  //   name: "هرزنامه",
+  //   url: "/dashboard/spam",
+  //   id: 9,
+  //   icon: <BsClipboard2X    className="text-base duration-100" />,
+  // },
+  // {
+  //   name: " گزارشات مدیریتی",
+  //   url: "/dashboard/total-reports",
+  //   id: 9,
+  //   icon: <TbReportSearch    className="text-base duration-100" />,
+  // },
 ];
 
 export const SIDEBAR_ADMIN_ITEMS = [
