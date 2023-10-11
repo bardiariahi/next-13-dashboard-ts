@@ -1,6 +1,6 @@
 import { useTranslation } from '../../i18n'
 
-export default async function Head({ params: { lng } }) {
+export default async function Head({ params: { lng } }:any) {
   const { t } = await useTranslation(lng, 'second-page')
 
   return (

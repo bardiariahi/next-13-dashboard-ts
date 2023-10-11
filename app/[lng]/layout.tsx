@@ -20,12 +20,9 @@ export default function RootLayout({
   return (
     <html lang={lng} dir={dir(lng)}>
       <head />
-      <body className={`min-h-screen max-w-screen-end overflow-y-auto `}>
-        <div className={` flex  `}>
-          <Sidebar  lng={lng}/>
+      <body>
+        <div>
           <div className="w-full">
-            <Navbar showMobileSidebar={showMobileSidebar} />
-
             {children}
           </div>
         </div>
